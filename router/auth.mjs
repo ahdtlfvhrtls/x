@@ -13,6 +13,16 @@ router.post("/signup", authController.signup);
 // http://127.0.0.1:8080/auth/login
 router.post("/login", authController.login);
 
+// 로그인 확인
+// GET
+// http://127.0.0.1:8080/auth/me
+router.get("/me", authController.me);
+
+// 로그아웃
+// GET
+// http://127.0.0.1:8080/auth/logout
+router.get("/logout", authController.logout);
+
 // 로그인 유지
 
 export default router;
