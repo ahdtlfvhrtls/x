@@ -24,6 +24,12 @@ select * from users where userid='apple';
 INSERT INTO users (userid, password, name, email, url) VALUES('apple','1111','김사과','apple.apple.com','https://randomuser.me/api/portraits/women/32.jpg');
 select * from users where idx=2;
 
-insert into posts(useridx, text) values(2, '안녕하세요!');
+insert into posts (useridx, text) values(4, '안녕하세요!');
+
+select u.userid, u.name, u.url, p.idx, p.useridx, p.text, p.createAt from users as u join posts p on u.idx = p.useridx;
+
+update posts set text='바뀐 글!!!' where idx = 2; 
+
+
 
 
